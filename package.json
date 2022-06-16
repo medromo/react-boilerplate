@@ -1,10 +1,11 @@
 {
   "name": "@medromo/react-app",
-  "version": "1.0.9",
+  "version": "1.1.0",
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "webpack serve --config webpack.dev.js",
+    "dev": "webpack serve --config webpack.dev.js --no-open",
+    "dev:open": "webpack serve --config webpack.dev.js",
     "build": "webpack --config webpack.prod.js"
   },
   "keywords": [],

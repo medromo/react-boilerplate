@@ -1,11 +1,11 @@
 @use "@styles/variables" as *;
-@use "./fonts.scss";
+@use "./inter-font.scss";
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: Montserrat;
+  font-family: "Inter", "Helvetica Neue", "Helvetica", "Arial", "sans-serif";
 }
 
 html {

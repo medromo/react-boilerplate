@@ -1,0 +1,41 @@
+.Input {
+  display: flex;
+  flex-direction: column;
+  font-size: 2rem;
+  width: 100%;
+  position: relative;
+  &__input {
+    height: 60px;
+    width: 100%;
+    border-radius: 10px;
+    padding-left: 10px;
+    &::-webkit-inner-spin-button,
+    &::-webkit-outer-spin-button {
+      -webkit-appearance: none;
+      margin: 0;
+    }
+  }
+  &-large {
+    padding-top: 18px;
+    resize: none;
+    flex-grow: 1;
+  }
+  label {
+    height: 20px;
+    flex-grow: 0;
+    position: absolute;
+    font-size: 1rem;
+    margin: 5px 8px;
+    color: black;
+  }
+  &__suffix {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+
+input[type="number"] {
+  -moz-appearance: textfield;
+}

@@ -1,0 +1,40 @@
+@use "@styles/variables" as *;
+
+.Button {
+  display: grid;
+  grid-template-columns: 1fr;
+  justify-content: center;
+  align-items: center;
+  height: 50px;
+  width: 200px;
+  font-size: 2.5rem;
+  background-color: $btn-primary-color;
+  border: none;
+  border-radius: 15px;
+  color: #fff;
+  cursor: pointer;
+  position: relative;
+  span {
+    display: inline;
+    padding-left: 10px;
+  }
+  &.with-icon {
+    grid-template-columns: 50px 1fr;
+    text-align: left;
+  }
+  &-icon {
+    justify-self: left;
+    display: flex;
+    align-items: center;
+  }
+  svg {
+    font-size: 3rem;
+    margin: 0 15px;
+  }
+  &.delete-btn {
+    background-color: #ff5353;
+  }
+  &:disabled {
+    filter: grayscale(60%) opacity(70%);
+  }
+}
