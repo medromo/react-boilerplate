@@ -46,6 +46,23 @@ async function main() {
     fs.rm(path.join(projectPath, "bin"), { recursive: true }, err => {
       if (err) throw err;
     });
+    fs.rm(
+      path.join(projectPath, "src/components/molecules/.gitkeep"),
+      { recursive: false },
+      err => {
+        if (err) throw err;
+      }
+    );
+    fs.rm(
+      path.join(projectPath, "src/components/organisms/.gitkeep"),
+      { recursive: false },
+      err => {
+        if (err) throw err;
+      }
+    );
+    fs.writeFile(path.join(projectPath, ".env"), "", err => {
+      if (err) throw err;
+    });
     exec("git init && git add . && git commit -m 'Initial commit'");
     console.log("The installation is done, this is ready to use !");
   } catch (error) {
